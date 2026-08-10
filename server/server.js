@@ -1,4 +1,4 @@
-require("dotenv").config();
+import dotenv from "dotenv";
 
 const express = require("express");
 const cors = require("cors");
@@ -11,6 +11,7 @@ const app = express();
 const PORT = import.meta.env.VITE_PORT || 5000;
 const BASE_URL = import.meta.env.VITE_API_URL || `http://localhost:${PORT}`;
 
+dotenv.config();
 app.use(cors());
 app.use(express.json());
 
