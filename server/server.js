@@ -8,8 +8,8 @@ const urlRoutes = require("./routes/urls");
 const Url = require("./models/Url");
 
 const app = express();
-const PORT = process.env.PORT || 5000;
-const BASE_URL = process.env.BASE_URL || `http://localhost:${PORT}`;
+const PORT = import.meta.env.VITE_PORT || 5000;
+const BASE_URL = import.meta.env.VITE_API_URL || `http://localhost:${PORT}`;
 
 app.use(cors());
 app.use(express.json());
