@@ -24,5 +24,5 @@ export async function deleteUrl(id) {
 
 // Build the full short link the user can copy
 export function getShortLink(shortCode) {
-  return `${API_URL}, ${shortCode}`;
+  return `${shortCode}`;
 }
