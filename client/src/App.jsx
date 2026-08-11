@@ -8,7 +8,6 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // Load URLs when the page first opens
   useEffect(() => {
     loadUrls();
   }, []);
@@ -30,7 +29,6 @@ function App() {
     try {
       const newUrl = await shortenUrl(originalUrl);
 
-      // If URL already existed, update the list; otherwise add to top
       setUrls((prev) => {
         const exists = prev.find((item) => item._id === newUrl._id);
         if (exists) {

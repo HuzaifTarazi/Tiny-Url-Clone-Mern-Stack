@@ -9,18 +9,15 @@ export async function fetchUrls() {
   return response.data;
 }
 
-// Send a long URL and get back a short link
 export async function shortenUrl(originalUrl) {
   const response = await api.post(`/shorten`, { originalUrl });
   return response.data;
 }
 
-// Remove a URL from the list
 export async function deleteUrl(id) {
   await api.delete(`/${id}`);
 }
 
-// Build the full short link the user can copy
 export function getShortLink(shortCode) {
   return `${API_URL}/${shortCode}`;
 }
