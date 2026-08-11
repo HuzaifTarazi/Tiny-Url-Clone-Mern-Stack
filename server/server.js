@@ -9,7 +9,7 @@ const Url = require("./models/Url");
 
 const app = express();
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;;
 const BASE_URL =process.env.VITE_API_URL;
 
 app.use(cors());
